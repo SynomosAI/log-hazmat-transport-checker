@@ -1,0 +1,59 @@
+# log-hazmat-transport-checker — 完整文本
+
+本文件为 llms.txt 标准的「完整版」，供长上下文模型一次性读取本仓库的完整说明。
+
+## 这是什么
+
+SynomosAI 平台的「物流 · 道路危险货物运输资质」域 Profile（domain/1.0）。状态 RESERVED：已按平台协议规范建好行业接入四件套骨架，等待具备本域资质的运营方认领。
+
+把「这批货能不能运、谁有资格运」拆成可核验属性；AI 只做要件提示，不做承运放行结论。
+
+## 解决什么问题
+
+1. 危险货物按类别有专门的包装、车辆、人员与应急预案要求，匿报夹带是主要事故成因。
+2. 货类（JT/T 617）、运输经营许可（含范围）、车辆罐体资质、驾押人员证件、应急预案备案需要机器可读地声明。
+3. 需要一个核验器只回答「这条声明是否可核验、缺什么要件」，而不替代承运放行决定。
+
+## 四件套
+
+- domain.manifest.json：域声明（5 个属性 / 签发方要求 / 3 条红线 / 有效期）
+- gate-map.json：动作摩擦五级表，每条红线必须有对应 block / require-owner 规则
+- privacy.json：隐私声明（默认关闭、最小必要、可撤回、可删除）——缺失即校验失败
+- checker.io.json：MCP 核验器契约，输出仅 shown / missing / expired / unverifiable 四态
+
+## 属性（5 个）
+
+- log.cargo_class：explosives / gases / flammable_liquid / flammable_solid / oxidizing / toxic / radioactive / corrosive / miscellaneous / not_hazmat / undetermined（JT/T 617）
+- log.transport_permit：valid / expired / none / not_required
+- log.vehicle_qualification：qualified / unqualified / unknown / not_required
+- log.personnel_cert：valid / expired / none / unknown
+- log.emergency_plan：filed / missing / not_required
+
+## 红线（3 条）
+
+1. 不得输出「可承运」「可放行」结论，以交通运输主管部门许可为唯一依据
+2. 人员资质失效、车辆不合格或类别不明时不得给出可运输表述
+3. 不得建议匿报、夹带、普货混装、拆分申报等方式规避危货监管
+
+## 快速开始
+
+本仓为声明式骨架，无运行时依赖：
+
+```bash
+git clone https://github.com/SynomosAI/log-hazmat-transport-checker.git
+cd log-hazmat-transport-checker
+cat domain.manifest.json
+```
+
+## 触发词
+
+危险货物 / 道路运输 / 危化品 / 运单 / 罐体检验 / 押运员证 / 应急预案备案 / JT/T 617 / hazmat / dangerous goods / road transport / carriage conditions / 核验器 / 域 Profile。
+
+## 许可与权利
+
+代码与配置 MIT（© 2026 SynomosAI）；文档知识版权 All Rights Reserved（学术/新闻/评估引用请注明出处）。完整条款见 LICENSE 与 LICENSE-CONTENT。联系：zhaoxinghua09@gmail.com ｜ ORCID 0009-0001-0512-1237。
+
+## 链接
+
+- 仓库: https://github.com/SynomosAI/log-hazmat-transport-checker
+- 组织: https://github.com/SynomosAI

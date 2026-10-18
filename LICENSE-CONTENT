@@ -1,0 +1,47 @@
+# Content License — All Rights Reserved
+
+**The prose content of this repository is all rights reserved.** It is *not* released
+under a public copyright licence, and it is **not** CC BY 4.0.
+
+## What this file covers
+
+`README.md`, `README.en.md`, `llms.txt`, `llms-full.txt`, `SECURITY.md`, `AGENTS.md`.
+
+Code and configuration in `domain.manifest.json`, `gate-map.json`, `privacy.json`,
+`checker.io.json`, `CODEOWNERS` and `.gitignore` is licensed under **MIT** — see
+`LICENSE`. That MIT grant covers the declarative config because it defines a runnable
+contract rather than stating a position.
+
+Copyright (c) 2026 SynomosAI. All rights reserved.
+
+## What you may do without asking
+
+- **Cite** — quote a short passage, an attribute key, a red line or a table, in
+  academic, journalistic, evaluative or public-discussion work, **with attribution**.
+- **Link** — link to this repository, or to any file in it, from anywhere.
+- **Run and apply** — run the code and configuration under the terms of `LICENSE` (MIT),
+  and apply the checks and recipes described here to your own systems.
+
+## What requires written permission
+
+- Republishing the profile, in whole or in substantial part, in any medium;
+- Translating, adapting, abridging, or producing any derivative work;
+- Bundling the content into a product, a paid service, a course, a dataset, or a
+  machine-learning training corpus;
+- Removing or altering the attribution or rights notices.
+
+Requests go to the contact line below. A request that serves the project's purpose —
+a course, a translation, a standards submission — is normally granted; asking first is
+the whole cost.
+
+## Attribution, when you cite
+
+    log-hazmat-transport-checker, domain "物流 · 道路危险货物运输资质", SynomosAI, <as-of date>. All rights reserved.
+
+---
+
+**Note on attribution practice.** This profile deliberately uses `as of` dates. When you
+cite it, cite the repo name, the domain name, and the `as of` date. A rule can regress;
+an undated citation becomes a false claim over time.
+
+**Contact.** zhaoxinghua09@gmail.com ｜ ORCID `0009-0001-0512-1237`

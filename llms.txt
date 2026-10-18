@@ -1,0 +1,21 @@
+# log-hazmat-transport-checker
+
+> SynomosAI 域 Profile：道路危险货物（hazmat）运输资质与承运条件核验。声明式四件套骨架（domain/1.0），状态 RESERVED 待认领。核验器（MCP 工具）只出示出处链，不下承运放行结论。
+
+`log-hazmat-transport-checker` 把「这批货能不能运、谁有资格运」拆成可核验属性：AI 只做要件提示，不做承运放行结论。危险货物按类别有专门的包装、车辆、人员与应急预案要求，匿报夹带是主要事故成因；承运放行权在企业安全管理人员与交通运输主管部门。
+
+## 核心
+
+- [domain.manifest.json](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/domain.manifest.json): 域声明（属性清单 / 签发方要求 / 红线 / 有效期）
+- [gate-map.json](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/gate-map.json): 动作摩擦五级表
+- [privacy.json](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/privacy.json): 隐私声明（准入条件）
+- [checker.io.json](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/checker.io.json): MCP 核验器输入输出契约
+- [README.md](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/README.md): 项目说明与快速开始
+
+## 可选
+
+- [AGENTS.md](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/AGENTS.md): 给 AI Agent 的工作指引
+- [llms-full.txt](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/llms-full.txt): 完整文本
+- [SECURITY.md](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/SECURITY.md): 安全策略
+- [LICENSE](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/LICENSE): 代码与配置 MIT
+- [LICENSE-CONTENT](https://github.com/SynomosAI/log-hazmat-transport-checker/blob/main/LICENSE-CONTENT): 文档知识版权 ARR（可注明出处引用）
